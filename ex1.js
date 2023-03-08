@@ -8,6 +8,7 @@ var classrooms = [
 ]
 
 var result1 = classrooms.sort((a, b) => b.age - a.age)
+console.log(result1)
 
 //Bai 2: chuyen mang da sap o bai 1 thanh 1 mang ten khac
 var result2 = [... new Set(result1.map(item => item.name))]
@@ -18,7 +19,6 @@ var result3 = new Array(100).fill(0).map((a, b) => b).filter(a => a % 5 != 0).re
 console.log(result3)
 
 //Bai 4: Viết code nhóm các user có cùng name và cộng tổng số count thành một mảng mới
-
 var array4 = [
     { name: 'name 1', count: 13 },
     { name: 'name 3', count: 23 },
@@ -27,10 +27,10 @@ var array4 = [
     { name: 'name 3', count: 20 },
     { name: 'name 2', count: 20 }
 ]
+
 var result4 = array4.reduce((a, b) => {
-    let index = a.findIndex((value) => value.name === b.name);
+    let index = a.findIndex((value) => value.name === b.name)
     index !== -1 ? a[index].count += b.count : a.push(b)
     return a;
 }, [])
-
 console.log(result4)
