@@ -5,18 +5,18 @@ var classrooms = [
     { name: 'name3', age: 15 },
     { name: 'name4', age: 10 },
     { name: 'name4', age: 27 }
-]
+];
 
-var result1 = classrooms.sort((a, b) => b.age - a.age)
-console.log(result1)
+var result1 = classrooms.sort((a, b) => b.age - a.age);
+console.log(result1);
 
 //Bai 2: chuyen mang da sap o bai 1 thanh 1 mang ten khac
-var result2 = [... new Set(result1.map(item => item.name))]
-console.log(result2)
+var result2 = [... new Set(result1.map(item => item.name))];
+console.log(result2);
 
 //Bai 3: Tạo 1 mảng có 100 phần tử toàn bộ là số 0, chuyển mảng vừa tạo thành mảng mới có giá trị từ 0->99, lọc ra những số chia hết cho 5 rồi tính tổng những số còn lại
-var result3 = new Array(100).fill(0).map((a, b) => b).filter(a => a % 5 != 0).reduce((a, b) => a + b)
-console.log(result3)
+var result3 = new Array(100).fill(0).map((a, b) => b).filter(a => a % 5 != 0).reduce((a, b) => a + b);
+console.log(result3);
 
 //Bai 4: Viết code nhóm các user có cùng name và cộng tổng số count thành một mảng mới
 var array4 = [
@@ -26,11 +26,11 @@ var array4 = [
     { name: 'name 2', count: 27 },
     { name: 'name 3', count: 20 },
     { name: 'name 2', count: 20 }
-]
+];
 
 var result4 = array4.reduce((a, b) => {
-    let index = a.findIndex((value) => value.name === b.name)
-    index !== -1 ? a[index].count += b.count : a.push(b)
+    let index = a.findIndex((value) => value.name === b.name);
+    index !== -1 ? a[index].count += b.count : a.push(b);
     return a;
-}, [])
-console.log(result4)
+}, []);
+console.log(result4);
