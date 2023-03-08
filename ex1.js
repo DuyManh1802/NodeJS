@@ -8,17 +8,13 @@ var classrooms = [
 ]
 
 var result1 = classrooms.sort((a, b) => b.age - a.age)
-console.log(result1)
 
 //Bai 2: chuyen mang da sap o bai 1 thanh 1 mang ten khac
-var result2 = new Set(result1.map(item => item.name))
+var result2 = [... new Set(result1.map(item => item.name))]
 console.log(result2)
 
 //Bai 3: Tạo 1 mảng có 100 phần tử toàn bộ là số 0, chuyển mảng vừa tạo thành mảng mới có giá trị từ 0->99, lọc ra những số chia hết cho 5 rồi tính tổng những số còn lại
-var temp = new Array(100).fill(0)
-var result = temp.map((a, b) => b)
-var temp1 = result3.filter(a => a % 5 != 0)
-var result3 = temp1.reduce((a, b) => a + b)
+var result3 = new Array(100).fill(0).map((a, b) => b).filter(a => a % 5 != 0).reduce((a, b) => a + b)
 console.log(result3)
 
 //Bai 4: Viết code nhóm các user có cùng name và cộng tổng số count thành một mảng mới
@@ -38,10 +34,3 @@ var result4 = array4.reduce((a, b) => {
 }, [])
 
 console.log(result4)
-
-
-
-
-
-
-
